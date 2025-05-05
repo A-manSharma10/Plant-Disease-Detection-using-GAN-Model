@@ -1,0 +1,8 @@
+%%writefile /content/plant_disease_app/requirements.txt
+flask
+torch
+torchvision
+transformers
+Pillow
+scikit-learn
+requests
