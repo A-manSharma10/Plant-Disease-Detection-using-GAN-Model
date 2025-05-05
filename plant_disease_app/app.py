@@ -1,4 +1,4 @@
-%%writefile /content/plant_disease_app/app.py
+
 from flask import Flask, render_template, request
 from PIL import Image
 import os
