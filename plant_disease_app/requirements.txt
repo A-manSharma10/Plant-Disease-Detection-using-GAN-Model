@@ -1,4 +1,4 @@
-%%writefile /content/plant_disease_app/requirements.txt
+
 flask
 torch
 torchvision
