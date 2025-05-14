@@ -1,8 +1,0 @@
-streamlit
-flask
-torch
-torchvision
-transformers
-Pillow
-scikit-learn
-requests
