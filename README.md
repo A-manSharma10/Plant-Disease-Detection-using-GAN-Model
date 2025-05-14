@@ -103,6 +103,13 @@ Confusion Matrix for real vs. fake (GAN)
 
 GAN loss curves (Discriminator vs Generator)
 
+## 📈 Practical Results
+
+- 🚀 **Accuracy Boost:** GAN-based data augmentation improved classification accuracy from **75.45% to 85.60%**, and F1-score from **0.7696 to 0.8715**.
+- 🧠 **Stable Training:** Discriminator loss reduced from **0.3531 to 0.1636** and AUROC peaked at **1.0**, indicating highly reliable classification performance.
+- 🌿 **Live Prediction Interface:** Developed a Gradio-based web UI using **MobileNetV2** for real-time plant disease prediction and Wikipedia-based disease info fetch.
+
+
 📌 Dataset
 PlantVillage Dataset (color)
 
