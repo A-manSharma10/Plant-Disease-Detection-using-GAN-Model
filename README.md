@@ -1,41 +1,120 @@
-# 🌱 DCGAN for PlantVillage Dataset
+🌿 Plant Disease Detection using GANs, ResNet34 & MobileNetV2
+This project implements an end-to-end plant disease detection system using Generative Adversarial Networks (DCGAN) for data augmentation and deep learning models (ResNet34 and MobileNetV2) for classification. It also includes a Gradio-based web interface and Wikipedia API integration for contextual disease information.
 
-This project implements a Deep Convolutional Generative Adversarial Network (DCGAN) using PyTorch to generate realistic plant leaf images from the PlantVillage dataset. The goal is to augment datasets or explore synthetic image generation in agricultural AI.
+🚀 Features
+DCGAN-based synthetic image generation for robust dataset augmentation.
 
-## 🚀 Features
+ResNet34 classifier for high-accuracy disease classification.
 
-- **DCGAN architecture** with a Generator and Discriminator trained adversarially
-- **Image augmentation pipeline** for robust training
-- **Training metrics tracked**: Accuracy, Precision, Recall, F1 Score, AUROC
-- **Image generation and visualization** every 5/20 epochs
-- **Model checkpoints** and generated samples saved to Google Drive
-- **Plots** of training loss and evaluation metrics
+Hugging Face MobileNetV2 model for inference on plant disease datasets.
 
-## 🧠 Model Architecture
+Gradio Web App for real-time user interaction.
 
-- **Generator**: 4-layer transposed convolutional network
-- **Discriminator**: 4-layer convolutional network with LeakyReLU
-- Loss Function: Binary Cross-Entropy
-- Optimizer: Adam
+Wikipedia integration to display detailed information about predicted diseases.
 
-## 📁 Dataset
+Evaluation metrics: Accuracy, Precision, Recall, F1 Score, AUROC, Confusion Matrix.
 
-- Source: [PlantVillage Dataset](https://www.kaggle.com/datasets/emmarex/plantdisease)
-- Format: Folder-based image classification
-- Used a subset of 1000 images for faster training and experimentation
+🗂️ Project Structure
+bash
+Copy
+Edit
+📦 Plant-Disease-Detection-GAN
+├── dataset/                      # PlantVillage dataset (color version)
+├── generated_images/            # Output of GAN-generated samples
+├── saved_models/                # Trained model weights
+├── main.py                      # Main script (DCGAN, ResNet, Web UI)
+├── README.md                    # You're reading it!
+📦 Requirements
+Install dependencies using:
 
-## 🖼️ Output Examples
+bash
+Copy
+Edit
+pip install -r requirements.txt
+Major Libraries Used:
 
-Generated images are saved every 5 epochs and visualized every 20 epochs to monitor progress.
+PyTorch
 
-## 🛠️ Dependencies
+torchvision
 
-- Python 3.x
-- PyTorch
-- torchvision
-- scikit-learn
-- matplotlib
-- numpy
+Hugging Face Transformers
 
-## 📂 Folder Structure
+Gradio
 
+scikit-learn
+
+matplotlib
+
+Pillow
+
+requests
+
+🧠 Models Used
+DCGAN: Trained to generate realistic leaf images to increase dataset diversity.
+
+ResNet34: Fine-tuned for multi-class classification on PlantVillage dataset.
+
+MobileNetV2 (Hugging Face): Used for prediction with external pre-trained model.
+
+⚙️ How It Works
+1. Train the DCGAN
+bash
+Copy
+Edit
+python main.py
+# Select Option 1 from the menu
+Generates augmented images to enhance model generalization.
+
+2. Train ResNet34 Classifier
+bash
+Copy
+Edit
+python main.py
+# Select Option 2
+Fine-tunes a ResNet34 model using real + GAN-augmented data.
+
+3. Predict from CLI
+bash
+Copy
+Edit
+python main.py
+# Select Option 3
+# Input path to a leaf image
+Predicts disease using the pre-trained MobileNetV2 model.
+
+4. Launch Web Interface
+bash
+Copy
+Edit
+python main.py
+# Select Option 4
+A user-friendly Gradio web app appears to:
+
+Upload images
+
+View predictions
+
+Read detailed disease info from Wikipedia
+
+📊 Evaluation Metrics
+Accuracy, Precision, Recall, F1 Score, AUROC (plotted after training)
+
+Confusion Matrix for real vs. fake (GAN)
+
+GAN loss curves (Discriminator vs Generator)
+
+📌 Dataset
+PlantVillage Dataset (color)
+
+Place it in:
+
+swift
+Copy
+Edit
+/content/drive/MyDrive/kaggle_datasets/plantvillage/color
+✍️ Author
+Aman Sharma
+LinkedIn | GitHub
+
+📄 License
+This project is licensed under the MIT License.
